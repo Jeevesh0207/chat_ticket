@@ -1,3 +1,3 @@
-import spellingPromt from "./spelling";
-
-export {spellingPromt}
+import spellingModelPrompt from './spelling';
+import ambiguityModelPrompt from './ambiguity';
+export { spellingModelPrompt, ambiguityModelPrompt };

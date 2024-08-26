@@ -1,3 +1,3 @@
-import spellingCorrection from './Spelling';
+import getResponse from "./getResponse";
 
-export { spellingCorrection };
+export {getResponse}

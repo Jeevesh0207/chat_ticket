@@ -24,7 +24,9 @@ const getGroqResponse = async (
       ],
       model: 'llama3-8b-8192',
     });
-    return chatCompletion.choices[0].message.content || 'Please try again later';
+    return (
+      chatCompletion.choices[0].message.content || 'Please try again later'
+    );
   } catch (error) {
     console.log('------getGroqResponse------');
     console.error(error);

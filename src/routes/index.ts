@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router();
 
-import { spellingCorrection } from '../controllers';
+import { getResponse } from '../controllers';
 
-router.post('/', spellingCorrection);
+router.post('/', getResponse);
 
 export default router;
