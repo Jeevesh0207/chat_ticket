@@ -1,15 +1,16 @@
 import getGroqResponse from '../../../utils/groq';
-import { ambiguityModelPrompt } from '../../../prompt';
+import { intentClassificationPrompt } from '../../../prompt';
 import { z } from 'zod';
 import funResParams from '../types';
-const checkAmbiguity = async (
+
+const intentClassification = async (
   query: string,
 ): Promise<z.infer<typeof funResParams>> => {
   try {
     const response = await getGroqResponse(
       {
         role: 'system',
-        content: JSON.stringify(ambiguityModelPrompt),
+        content: JSON.stringify(intentClassificationPrompt),
       },
       {
         role: 'user',
@@ -31,4 +32,4 @@ const checkAmbiguity = async (
   }
 };
 
-export default checkAmbiguity;
+export default intentClassification;
