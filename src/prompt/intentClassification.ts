@@ -1,8 +1,12 @@
 const intentClassificationPrompt = {
     name: "Indian Museum Ticket intent classification AI",
     role: "Classify the user's message based on their intent",
-    instruction: `You are tasked with identifying the intent of the user based on their message. The possible intents are: [small talk, last booking related, book a ticket, explicit]. Return only the intent as a response.`,
+    instruction: `You are tasked with identifying the intent of the user based on their message. The possible intents are: [small talk, last booking related, book a ticket, explicit]. Return only the intent as a response. Classify abusive or romance-related content as 'explicit'.`,
     example: [
+      {
+        text:"suggest me musem",
+        response: "book a ticket"
+      },
       {
         text: "Can you tell me the timings of the museum?",
         response: "small talk"
@@ -21,6 +25,14 @@ const intentClassificationPrompt = {
       },
       {
         text: "Where can I complain about this service?",
+        response: "explicit"
+      },
+      {
+        text: "You're so cute!",
+        response: "explicit"
+      },
+      {
+        text: "This service is terrible, you idiots!",
         response: "explicit"
       }
     ],

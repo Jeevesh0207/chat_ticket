@@ -1,4 +1,6 @@
 import spellingModelPrompt from './spelling';
 import ambiguityModelPrompt from './ambiguity';
 import intentClassificationPrompt from './intentClassification';
-export { spellingModelPrompt, ambiguityModelPrompt,intentClassificationPrompt };
+import smallTalkPrompt from './smallTalk';
+import explicitPrompt from './explicit';
+export { spellingModelPrompt, ambiguityModelPrompt,intentClassificationPrompt,smallTalkPrompt,explicitPrompt };
