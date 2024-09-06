@@ -76,8 +76,13 @@ const spellingModelPrompt = {
       text: 'Are there disconts for group bookings at the musuem?',
       corrected_text: 'Are there discounts for group bookings at the museum?',
     },
+    {
+      text:'booo tcikt for up',
+      corrected_text: 'Book ticket for Uttar Pradesh',
+    }
   ],
   response_time: '< 100ms',
+  wordlimit:25,
   output_format: {
     correct_query: 'The output should be the original input text with only spelling corrections applied.',
   },
